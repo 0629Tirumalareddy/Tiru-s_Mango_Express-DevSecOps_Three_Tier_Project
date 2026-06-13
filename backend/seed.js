@@ -7,7 +7,7 @@ const mangoes = [
     name: 'Alphonso',
     description: 'The king of mangoes — rich, creamy, aromatic',
     pricePerKg: 450,
-    image: 'https://placehold.co/300x300/FFB347/FFFFFF?text=Alphonso',
+    image: '/images/mangoes/alphonso.jpg',
     origin: 'Ratnagiri, Maharashtra',
     stock: 100
   },
@@ -15,7 +15,7 @@ const mangoes = [
     name: 'Kesar',
     description: 'Saffron-colored pulp, sweet and fragrant',
     pricePerKg: 350,
-    image: 'https://placehold.co/300x300/FFA500/FFFFFF?text=Kesar',
+    image: '/images/mangoes/kesar.jpg',
     origin: 'Gir, Gujarat',
     stock: 100
   },
@@ -23,7 +23,7 @@ const mangoes = [
     name: 'Banganapalli',
     description: 'Large, fiberless, mildly sweet',
     pricePerKg: 250,
-    image: 'https://placehold.co/300x300/FFD700/FFFFFF?text=Banganapalli',
+    image: '/images/mangoes/banganapalli.jpg',
     origin: 'Andhra Pradesh',
     stock: 100
   },
@@ -31,7 +31,7 @@ const mangoes = [
     name: 'Dasheri',
     description: 'Sweet, fragrant, fiberless pulp',
     pricePerKg: 200,
-    image: 'https://placehold.co/300x300/FFC04D/FFFFFF?text=Dasheri',
+    image: '/images/mangoes/dasheri.jpg',
     origin: 'Lucknow, Uttar Pradesh',
     stock: 100
   },
@@ -39,7 +39,7 @@ const mangoes = [
     name: 'Langra',
     description: 'Tangy-sweet flavor, greenish-yellow skin',
     pricePerKg: 220,
-    image: 'https://placehold.co/300x300/9ACD32/FFFFFF?text=Langra',
+    image: '/images/mangoes/langra.jpg',
     origin: 'Varanasi, Uttar Pradesh',
     stock: 100
   },
@@ -47,7 +47,7 @@ const mangoes = [
     name: 'Totapuri',
     description: 'Tangy, firm flesh, great for salads',
     pricePerKg: 150,
-    image: 'https://placehold.co/300x300/ADFF2F/FFFFFF?text=Totapuri',
+    image: '/images/mangoes/totapuri.jpg',
     origin: 'Karnataka',
     stock: 100
   },
@@ -55,7 +55,7 @@ const mangoes = [
     name: 'Himsagar',
     description: 'Sweet, smooth, melt-in-mouth texture',
     pricePerKg: 300,
-    image: 'https://placehold.co/300x300/FFAA33/FFFFFF?text=Himsagar',
+    image: '/images/mangoes/himsagar.jpg',
     origin: 'West Bengal',
     stock: 100
   },
@@ -63,7 +63,7 @@ const mangoes = [
     name: 'Chausa',
     description: 'Juicy, sweet, golden-yellow',
     pricePerKg: 280,
-    image: 'https://placehold.co/300x300/FFCC33/FFFFFF?text=Chausa',
+    image: '/images/mangoes/chausa.jpg',
     origin: 'Uttar Pradesh',
     stock: 100
   }

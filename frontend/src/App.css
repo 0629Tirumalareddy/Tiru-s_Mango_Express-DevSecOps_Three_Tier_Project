@@ -1,0 +1,38 @@
+* { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Segoe UI', sans-serif; }
+
+.hero { position: relative; text-align: center; }
+.hero-image { width: 100%; max-height: 300px; object-fit: cover; }
+.hero-text { position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  width: 100%; }
+.hero-text h1 { .hero-text h1 {
+  font-size: 2.5rem;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+  margin-bottom: 8px; }
+}
+.main-content { display: flex; gap: 20px; padding: 20px; flex-wrap: wrap; }
+
+.mango-grid { flex: 3; display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 16px; }
+
+.mango-card { border: 1px solid #eee; border-radius: 8px; padding: 12px; text-align: center; box-shadow: 0 2px 6px rgba(0,0,0,0.1); }
+.mango-card img { width: 100%; border-radius: 6px; }
+.mango-card .origin { font-size: 0.85rem; color: #888; }
+.mango-card .description { font-size: 0.85rem; margin: 6px 0; }
+.mango-card .price { font-weight: bold; color: #d97706; margin: 8px 0; }
+.mango-card button { background: #f4a300; color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer; }
+
+.cart { flex: 1; min-width: 250px; border: 1px solid #eee; border-radius: 8px; padding: 16px; height: fit-content; }
+.cart-item { display: flex; justify-content: space-between; align-items: center; margin: 8px 0; }
+.checkout-btn { width: 100%; background: #16a34a; color: white; border: none; padding: 10px; margin-top: 10px; border-radius: 4px; cursor: pointer; }
+
+.checkout-form, .confirmation { max-width: 500px; margin: 50px auto; padding: 20px; border: 1px solid #eee; border-radius: 8px; text-align: center; }
+.checkout-form form { display: flex; flex-direction: column; gap: 10px; text-align: left; }
+.checkout-form input, .checkout-form textarea { padding: 8px; border: 1px solid #ccc; border-radius: 4px; }
+.form-buttons { display: flex; gap: 10px; }
+.form-buttons button { flex: 1; padding: 10px; border: none; border-radius: 4px; cursor: pointer; }
+.form-buttons button[type="submit"] { background: #16a34a; color: white; }
+.form-buttons button[type="button"] { background: #ccc; }
