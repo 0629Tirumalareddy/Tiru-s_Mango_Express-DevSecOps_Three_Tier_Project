@@ -1,0 +1,46 @@
+version: '3.8'
+
+services:
+  mongo:
+    image: mongo:6
+    container_name: mongo
+    restart: always
+    environment:
+      MONGO_INITDB_DATABASE: mangoexpress
+    volumes:
+      - mongo-data:/data/db
+    networks:
+      - mango-network
+
+  backend:
+    build: ./backend
+    container_name: backend
+    restart: always
+    environment:
+      PORT: 5000
+      MONGO_URI: mongodb://mongo:27017/mangoexpress
+    depends_on:
+      - mongo
+    networks:
+      - mango-network
+
+  frontend:
+    build:
+      context: ./frontend
+      args:
+        VITE_API_URL: /api
+    container_name: frontend
+    restart: always
+    ports:
+      - "80:80"
+    depends_on:
+      - backend
+    networks:
+      - mango-network
+
+volumes:
+  mongo-data:
+
+networks:
+  mango-network:
+    driver: bridge

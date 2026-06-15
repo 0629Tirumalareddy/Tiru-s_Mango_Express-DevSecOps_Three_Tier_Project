@@ -63,3 +63,15 @@ tirus-mango-express/
 - Connected frontend to backend via Axios (api.js), using VITE_API_URL env variable
 - Implemented full user flow: browse mangoes → add to cart → checkout → place order → confirmation
 - Tested locally against backend running on localhost:5000
+## Phase 4 — Docker Compose (Local Testing)
+- Created multi-stage Dockerfiles for backend (Node/Alpine) and frontend (Nginx/Alpine)
+- Added nginx.conf to serve React app and proxy /api calls to backend container
+- Created docker-compose.yml to orchestrate all 3 services (frontend, backend, mongo)
+  on a shared Docker network (mango-network)
+- Updated frontend .env to use /api as base URL (nginx handles proxying)
+- Verified full app flow works inside containers end-to-end
+- Key Docker concepts used:
+  - Multi-stage builds to keep images small and secure
+  - Non-root user in backend container (security best practice)
+  - Named volumes for MongoDB data persistence
+  - Bridge networking for inter-container communication
