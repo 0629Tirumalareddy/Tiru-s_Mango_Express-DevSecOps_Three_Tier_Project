@@ -97,3 +97,21 @@ tirus-mango-express/
   - Deployment: manages stateless app replicas
   - Service (ClusterIP): internal DNS-based routing
   - Ingress: external traffic routing + load balancing
+## Phase 6 — Monitoring (Prometheus + Grafana)
+- Installed Helm (Kubernetes package manager)
+- Added prometheus-community Helm repository
+- Created dedicated monitoring namespace
+- Installed kube-prometheus-stack via Helm:
+  - Prometheus — metrics collection from all pods
+  - Grafana — visualization dashboards
+  - Alertmanager — alert management
+  - kube-state-metrics — Kubernetes resource metrics
+  - node-exporter — node-level metrics
+- Created ServiceMonitor to scrape backend /metrics endpoint every 15s
+- Imported Kubernetes cluster dashboard (ID: 15661) in Grafana
+- Imported Node.js backend dashboard (ID: 11159) in Grafana
+- Accessed Grafana via port-forward on localhost:9000
+- Key concepts:
+  - Helm: package manager for Kubernetes
+  - ServiceMonitor: CRD that tells Prometheus what to scrape
+  - kube-prometheus-stack: all-in-one monitoring solution
