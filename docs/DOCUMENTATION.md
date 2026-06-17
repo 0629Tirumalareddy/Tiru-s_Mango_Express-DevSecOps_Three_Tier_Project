@@ -75,3 +75,25 @@ tirus-mango-express/
   - Non-root user in backend container (security best practice)
   - Named volumes for MongoDB data persistence
   - Bridge networking for inter-container communication
+## Phase 5 — Kubernetes Deployment
+- Started Minikube with Docker driver (4GB RAM, 2 CPUs)
+- Enabled NGINX Ingress Controller addon
+- Created dedicated namespace: mango-express
+- MongoDB: StatefulSet + PVC (1Gi persistent storage) + headless Service
+- Backend: Deployment (2 replicas) + ClusterIP Service
+  - Liveness & readiness probes on /health endpoint
+  - Resource limits set for CPU and memory
+  - MONGO_URI injected securely from Secret
+  - PORT injected from ConfigMap
+- Frontend: Deployment (2 replicas) + ClusterIP Service
+- Ingress: Routes mango.local/ to frontend, mango.local/api to backend
+- Added mango.local to /etc/hosts pointing to Minikube IP
+- Key Kubernetes concepts used:
+  - Namespace: resource isolation
+  - Secret: secure credential storage
+  - ConfigMap: non-sensitive config injection
+  - PVC: persistent database storage
+  - StatefulSet: stable identity for MongoDB
+  - Deployment: manages stateless app replicas
+  - Service (ClusterIP): internal DNS-based routing
+  - Ingress: external traffic routing + load balancing
